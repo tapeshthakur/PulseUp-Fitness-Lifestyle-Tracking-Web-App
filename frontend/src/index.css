@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: 245 248 255;
+  --bg-elevated: 255 255 255;
+  --foreground: 15 23 42;
+  --muted: 100 116 139;
+  --card-border: 255 255 255;
+  --card-alpha: 0.64;
+  --ring: 99 102 241;
+  --hero-from: 59 130 246;
+  --hero-to: 168 85 247;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: 2 6 23;
+  --bg-elevated: 15 23 42;
+  --foreground: 241 245 249;
+  --muted: 148 163 184;
+  --card-border: 255 255 255;
+  --card-alpha: 0.08;
+  --ring: 129 140 248;
+  --hero-from: 56 189 248;
+  --hero-to: 192 132 252;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[rgb(var(--bg))] text-[rgb(var(--foreground))] antialiased font-sans;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(var(--hero-from), 0.12), transparent 20%),
+    radial-gradient(circle at 90% 10%, rgba(var(--hero-to), 0.14), transparent 25%),
+    linear-gradient(180deg, rgba(var(--bg), 1), rgba(var(--bg), 0.98));
+  min-height: 100vh;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--ring), 0.6) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(var(--ring), 0.45);
+  border-radius: 999px;
+}
+
+.glass-panel {
+  background: rgba(var(--bg-elevated), var(--card-alpha));
+  border: 1px solid rgba(var(--card-border), 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.hero-text {
+  background: linear-gradient(135deg, rgb(var(--hero-from)), rgb(var(--hero-to)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grid-pattern {
+  background-image: linear-gradient(rgba(var(--foreground), 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--foreground), 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.input-shell {
+  @apply flex items-center gap-3 rounded-2xl border border-white/10 bg-white/60 px-4 py-3 transition duration-200 dark:bg-slate-950/40;
+}
+
+.input-shell:focus-within {
+  @apply border-indigo-400/80 shadow-glow;
+}
+
+.floating-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(30px);
+  opacity: 0.6;
+  pointer-events: none;
+}

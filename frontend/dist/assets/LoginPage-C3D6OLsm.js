@@ -1,0 +1,1 @@
+import{j as o}from"./motion-DEofqkre.js";import{A as t}from"./AuthPage-BjQI2Qvp.js";import"./react-fucShVU1.js";import"./index-BgLc39fE.js";import"./icons-CgLmlJya.js";function a(){return o.jsx(t,{mode:"login"})}export{a as default};

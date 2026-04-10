@@ -1,0 +1,1 @@
+import{j as t}from"./motion-DEofqkre.js";import{A as o}from"./AuthPage-BjQI2Qvp.js";import"./react-fucShVU1.js";import"./index-BgLc39fE.js";import"./icons-CgLmlJya.js";function s(){return t.jsx(o,{mode:"signup"})}export{s as default};
